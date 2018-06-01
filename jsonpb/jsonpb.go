@@ -622,7 +622,7 @@ func (m *Marshaler) marshalValue(out *errWriter, prop *proto.Properties, v refle
 	if err != nil {
 		return err
 	}
-	needToQuote := string(b[0]) != `"` && (v.Kind() == reflect.Int64 || v.Kind() == reflect.Uint64)
+	needToQuote := string(b[0]) != `"`
 	if needToQuote {
 		out.write(`"`)
 	}
